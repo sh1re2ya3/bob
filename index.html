@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #e8cb2e;
+        z-index: 2;
+      }
+      .face {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+      }
+      .eyes {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 150px;
+        z-index: -1;
+      }
+      .eye {
+        width: 27px;
+        height: 20px;
+        background-color: #ffffffbd;
+        border-radius: 50%;
+        margin: 20px;
+        overflow: hidden;
+        position: relative;
+        align-content: center;
+        text-align: -webkit-center;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+      .pupil {
+        width: 20px;
+        height: 20px;
+        background-color: #16270fde;
+        border-radius: 50%;
+        z-index: -10;
+      }
+      .eye {
+        animation-name: blink;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function:ease-in;
+        transform-origin: bottom; 
+      }
+      @keyframes blink {
+        0% {
+          transform: scaleY(1);
+        }
+        5% {
+          transform: scaleY(0);
+        }
+        10%{
+          transform: scaleY(1);
+        }
+        /* 90% {
+          transform: scaleY(1);
+        }
+         95% {
+          transform: scaleY(0);
+        }
+        100% {
+          transform: scaleY(1);
+        } */
+      }
+      .mouth {
+        width: 80px;
+        /* height: 10px; */
+        border-bottom: 10px solid #16270fd1;
+        margin: 150px auto 0 auto;
+        /* border-radius: 20px; */
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        animation-name: smile;
+         animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes smile{
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="face">
+      <div class="eyes">
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+      </div>
+      <div class="mouth-container">
+        <div class="mouth" id="mouth"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- face
+'-' on load
+'u' on mouse move (eyes track mouse and smile)
+>o< on click (eyes squint shut and o mouth)- then center eyes
+
+
+
+future scope
+blush on rubbing face
+wink on double click
+cheek pull on drag?
+blinking when idle
+-->
