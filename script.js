@@ -44,3 +44,8 @@ function toggleBlink(state){
     eye.style.animationPlayState = playState;
   }
 }
+
+function smile(){
+  const mouth = document.querySelector(".mouth");
+  
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -52,8 +52,8 @@
         animation-name: blink;
         animation-duration: 3s;
         animation-iteration-count: infinite;
-        animation-timing-function:ease-in;
-        transform-origin: bottom; 
+        animation-timing-function: ease-in;
+        transform-origin: bottom;
       }
       @keyframes blink {
         0% {
@@ -62,7 +62,7 @@
         5% {
           transform: scaleY(0);
         }
-        10%{
+        10% {
           transform: scaleY(1);
         }
         /* 90% {
@@ -75,25 +75,33 @@
           transform: scaleY(1);
         } */
       }
+
+      .mouth-container {
+        height: 100px;
+        margin: 70px auto 0 auto;
+        align-content: end;
+        text-align: -webkit-center;
+      }
       .mouth {
         width: 80px;
         /* height: 10px; */
         border-bottom: 10px solid #16270fd1;
-        margin: 150px auto 0 auto;
-        /* border-radius: 20px; */
-
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-radius: 40px;
+      }
+      .smile {
+        height: 20px;
 
         animation-name: smile;
-         animation-duration: 1s;
+        animation-duration: 1s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
-      }
-
-      @keyframes smile{
 
       }
+      
+      @keyframes smile {
+        
+      }
+
     </style>
   </head>
   <body>
@@ -107,7 +115,7 @@
         </div>
       </div>
       <div class="mouth-container">
-        <div class="mouth" id="mouth"></div>
+        <div class="mouth smile" id="mouth"></div>
       </div>
     </div>
 
